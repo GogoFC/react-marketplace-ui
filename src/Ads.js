@@ -1,5 +1,20 @@
 import React, { Component } from "react";
 
+const adData = [
+  { adTitle: "Car for Sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "john@example.com" },
+  { adTitle: "Selling my Algebra Book", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "mary@example.com" },
+  { adTitle: "GPU", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "george@example.com" },
+  { adTitle: "Computer for sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "james@example.com" },
+  { adTitle: "Car for Sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "john@example.com" },
+  { adTitle: "Selling my Algebra Book", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "mary@example.com" },
+  { adTitle: "GPU", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "george@example.com" },
+  { adTitle: "Computer for sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "james@example.com" },
+  { adTitle: "Car for Sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "john@example.com" },
+  { adTitle: "Selling my Algebra Book", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "mary@example.com" },
+  { adTitle: "GPU", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "george@example.com" },
+  { adTitle: "Computer for sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "james@example.com" },
+];
+
 class Ads extends Component {
   render() {
     return (
@@ -22,34 +37,38 @@ class Ads extends Component {
                 className="form-control"
                 id="filterTitle"
                 placeholder="Enter title"
-              ></input>
+              />
             </div>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <Ad />
-              <Ad />
-              <Ad />
-              <Ad />
-              <Ad />
-              <Ad />
-              <Ad />
-              <Ad />
-              <Ad />
+
+         
+
+{
+adData.map((adList) => (<Ad>{adList}</Ad>))
+}
+              
+             
             </div>
           </div>
 
-          <div class="py-5 text-center container">
-
-  
-        </div>
-
-
+          <div class="py-5 text-center container"></div>
         </div>
       </>
     );
   }
 }
 
-export const Ad = () => {
+export const Ad = (adData) => {
+  
+  const adObject = {
+    image: "http://www.w3.org/2000/svg",
+    hoverTitle: "Placeholder",
+    title: "Title",
+    text: "This is the first advertisement.",
+    contact: "email@email.com",
+  }
+
+
   return (
     <div className="col">
       <div className="card shadow-sm">
@@ -57,36 +76,36 @@ export const Ad = () => {
           className="bd-placeholder-img card-img-top"
           width="100%"
           height="225"
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns={adObject.image}
           role="img"
           aria-label="Placeholder: Thumbnail"
           preserveAspectRatio="xMidYMid slice"
           focusable="false"
         >
-          <title>Placeholder</title>
+          <title>{adObject.hoverTitle}</title>
           <rect width="100%" height="100%" fill="#55595c" />
           <text x="50%" y="50%" fill="#eceeef" dy=".3em">
             Ad Photo
           </text>
         </svg>
         <div className="card-body">
-          <h5 className="card-title">Title</h5>
-          <p className="card-text">This is the first advertisement.</p>
+          <h5 className="card-title">{adObject.title}</h5>
+          <p className="card-text">{adData.adTitle}</p>
           <p
             className="card-text"
-            onclick="alert('Contact: contact5@example.com')"
+            onClick="alert('Contact: {adObject.contact}')"
           >
-            Contact: ***
+            Contact: {adObject.contact}
           </p>
           <div className="d-flex justify-content-between align-items-center"></div>
         </div>
         <div className="card-footer text-center">
           <button
             className="btn btn-info"
-            onclick="alert('Contact: contact5@example.com')"
+            onClick="alert('Contact: contact5@example.com')"
           >
             Details
-          </button>
+          </button> 
         </div>
       </div>
     </div>
