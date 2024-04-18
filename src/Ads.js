@@ -36,6 +36,13 @@ class Ads extends Component {
               <Ad />
             </div>
           </div>
+
+          <div class="py-5 text-center container">
+
+  
+        </div>
+
+
         </div>
       </>
     );
