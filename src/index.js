@@ -1,20 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.css'
-import Header from './Header';
-import Ads from './Ads';
-import Footer from './Footer';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "bootstrap/dist/css/bootstrap.css";
+import Header from "./Header";
+import Ads from "./Ads";
+import Footer from "./Footer";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Header />
     <Ads />
     <Footer />
-   
-
   </React.StrictMode>
 );
-

@@ -15,7 +15,7 @@ class Header extends Component {
 export const HeaderElement = () => {
   return (
     <header className="container-fluid bg-danger text-white py-5">
-      Header{" "}
+      <h1>Header</h1>{" "}
     </header>
   );
 };
