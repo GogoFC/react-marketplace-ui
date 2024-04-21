@@ -44,7 +44,7 @@ class Ads extends Component {
          
 
 {
-adData.map((adList) => (<Ad>{adList}</Ad>))
+adData.map((element) => (<Ad>{element}</Ad>))
 }
               
              
@@ -58,7 +58,7 @@ adData.map((adList) => (<Ad>{adList}</Ad>))
   }
 }
 
-export const Ad = (adData) => {
+export const Ad = () => {
   
   const adObject = {
     image: "http://www.w3.org/2000/svg",
@@ -90,7 +90,7 @@ export const Ad = (adData) => {
         </svg>
         <div className="card-body">
           <h5 className="card-title">{adObject.title}</h5>
-          <p className="card-text">{adData.adTitle}</p>
+          <p className="card-text">{adData.text}</p>
           <p
             className="card-text"
             onClick="alert('Contact: {adObject.contact}')"
