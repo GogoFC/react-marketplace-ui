@@ -1,72 +1,14 @@
-import React, { Component } from "react";
-
-const adData = [
-  {
-    hoverTitle: "HoverTitle",
-    adImage: "https://picsum.photos/200/300",
-    adTitle: "Car for Sale",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "john@example.com",
-  },
-  {
-    adImage: "http://www.w3.org/2000/svg",
-    adTitle: "Selling my Algebra Book",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "mary@example.com",
-  },
-  {
-    adTitle: "GPU",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "george@example.com",
-  },
-  {
-    adTitle: "Computer for sale",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "james@example.com",
-  },
-  {
-    adTitle: "Car for Sale",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "john@example.com",
-  },
-  {
-    adTitle: "Selling my Algebra Book",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "mary@example.com",
-  },
-  {
-    adTitle: "GPU",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "george@example.com",
-  },
-  {
-    adTitle: "Computer for sale",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "james@example.com",
-  },
-  {
-    adTitle: "Car for Sale",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "john@example.com",
-  },
-  {
-    adTitle: "Selling my Algebra Book",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "mary@example.com",
-  },
-  {
-    adTitle: "GPU",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "george@example.com",
-  },
-  {
-    adTitle: "Computer for sale",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    contact: "james@example.com",
-  },
-];
+import { ads } from "./Data.js";
 
 const Ads = () => {
+  return (
+    <div>
+      <ShowAds ads={ads} />
+    </div>
+  );
+
+  function ShowAds(props) {
+    const ads = props.ads;
 
     return (
       <>
@@ -90,7 +32,7 @@ const Ads = () => {
               />
             </div>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              {adData.map((ad) => (
+              {ads.map((ad) => (
                 <div className="col">
                   <div className="card shadow-sm">
                     <svg
@@ -125,7 +67,7 @@ const Ads = () => {
                         className="btn btn-info"
                         onClick="alert('Contact: contact5@example.com')"
                       >
-                        Details
+                        Detaails
                       </button>
                     </div>
                   </div>
@@ -137,7 +79,7 @@ const Ads = () => {
         </div>
       </>
     );
-  
-}
+  }
+};
 
 export default Ads;
