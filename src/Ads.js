@@ -66,8 +66,8 @@ const adData = [
   },
 ];
 
-class Ads extends Component {
-  render() {
+const Ads = () => {
+
     return (
       <>
         <section class="py-3 text-center container">
@@ -137,7 +137,7 @@ class Ads extends Component {
         </div>
       </>
     );
-  }
+  
 }
 
 export default Ads;
