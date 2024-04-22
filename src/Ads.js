@@ -80,7 +80,6 @@ class Ads extends Component {
 
         <div className="album py-5 bg-body-tertiary">
           <div className="container">
-            {/* Filter component */}
             <div class="mb-4">
               <label for="filterTitle">Filter by Title:</label>
               <input
@@ -134,7 +133,6 @@ class Ads extends Component {
               ))}
             </div>
           </div>
-
           <div class="py-5 text-center container"></div>
         </div>
       </>
