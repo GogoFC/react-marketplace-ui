@@ -68,7 +68,7 @@ const Ads = () => {
                         className="btn btn-info"
                         onClick="alert('Contact: contact5@example.com')"
                       >
-                        Detaails
+                        Details
                       </button>
                     </div>
                   </div>
