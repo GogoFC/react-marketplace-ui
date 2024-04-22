@@ -1,3 +1,4 @@
+// Syntax for importing exported array is { ads }. Array const must be exported.
 import { ads } from "./Data.js";
 
 const Ads = () => {
