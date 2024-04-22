@@ -6,7 +6,7 @@ const Ads = () => {
   return (
     <div>
       <ShowAds ads={Data} />
-      <ShowAds ads={ads} />
+ {/*     <ShowAds ads={ads} />   */}
     </div>
   );
 
