@@ -1,18 +1,69 @@
 import React, { Component } from "react";
 
 const adData = [
-  { adTitle: "Car for Sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "john@example.com" },
-  { adTitle: "Selling my Algebra Book", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "mary@example.com" },
-  { adTitle: "GPU", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "george@example.com" },
-  { adTitle: "Computer for sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "james@example.com" },
-  { adTitle: "Car for Sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "john@example.com" },
-  { adTitle: "Selling my Algebra Book", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "mary@example.com" },
-  { adTitle: "GPU", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "george@example.com" },
-  { adTitle: "Computer for sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "james@example.com" },
-  { adTitle: "Car for Sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "john@example.com" },
-  { adTitle: "Selling my Algebra Book", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "mary@example.com" },
-  { adTitle: "GPU", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "george@example.com" },
-  { adTitle: "Computer for sale", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut sem viverra aliquet eget sit.", contact: "james@example.com" },
+  {
+    hoverTitle: "HoverTitle",
+    adImage: "https://picsum.photos/200/300",
+    adTitle: "Car for Sale",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "john@example.com",
+  },
+  {
+    adImage: "http://www.w3.org/2000/svg",
+    adTitle: "Selling my Algebra Book",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "mary@example.com",
+  },
+  {
+    adTitle: "GPU",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "george@example.com",
+  },
+  {
+    adTitle: "Computer for sale",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "james@example.com",
+  },
+  {
+    adTitle: "Car for Sale",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "john@example.com",
+  },
+  {
+    adTitle: "Selling my Algebra Book",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "mary@example.com",
+  },
+  {
+    adTitle: "GPU",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "george@example.com",
+  },
+  {
+    adTitle: "Computer for sale",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "james@example.com",
+  },
+  {
+    adTitle: "Car for Sale",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "john@example.com",
+  },
+  {
+    adTitle: "Selling my Algebra Book",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "mary@example.com",
+  },
+  {
+    adTitle: "GPU",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "george@example.com",
+  },
+  {
+    adTitle: "Computer for sale",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    contact: "james@example.com",
+  },
 ];
 
 class Ads extends Component {
@@ -40,14 +91,47 @@ class Ads extends Component {
               />
             </div>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-         
-
-{
-adData.map((adList) => (<Ad>{adList}</Ad>))
-}
-              
-             
+              {adData.map((ad) => (
+                <div className="col">
+                  <div className="card shadow-sm">
+                    <svg
+                      className="bd-placeholder-img card-img-top"
+                      width="100%"
+                      height="225"
+                      xmlns={ad.adImage}
+                      role="img"
+                      aria-label="Placeholder: Thumbnail"
+                      preserveAspectRatio="xMidYMid slice"
+                      focusable="false"
+                    >
+                      <title>{ad.hoverTitle}</title>
+                      <rect width="100%" height="100%" fill="#55595c" />
+                      <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                        Ad Photo
+                      </text>
+                    </svg>
+                    <div className="card-body">
+                      <h5 className="card-title">{ad.adTitle}</h5>
+                      <p className="card-text">{ad.text}</p>
+                      <p
+                        className="card-text"
+                        onClick="alert('Contact: {adObject.contact}')"
+                      >
+                        Contact: {ad.contact}
+                      </p>
+                      <div className="d-flex justify-content-between align-items-center"></div>
+                    </div>
+                    <div className="card-footer text-center">
+                      <button
+                        className="btn btn-info"
+                        onClick="alert('Contact: contact5@example.com')"
+                      >
+                        Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -57,59 +141,5 @@ adData.map((adList) => (<Ad>{adList}</Ad>))
     );
   }
 }
-
-export const Ad = (adData) => {
-  
-  const adObject = {
-    image: "http://www.w3.org/2000/svg",
-    hoverTitle: "Placeholder",
-    title: "Title",
-    text: "This is the first advertisement.",
-    contact: "email@email.com",
-  }
-
-
-  return (
-    <div className="col">
-      <div className="card shadow-sm">
-        <svg
-          className="bd-placeholder-img card-img-top"
-          width="100%"
-          height="225"
-          xmlns={adObject.image}
-          role="img"
-          aria-label="Placeholder: Thumbnail"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>{adObject.hoverTitle}</title>
-          <rect width="100%" height="100%" fill="#55595c" />
-          <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-            Ad Photo
-          </text>
-        </svg>
-        <div className="card-body">
-          <h5 className="card-title">{adObject.title}</h5>
-          <p className="card-text">{adData.adTitle}</p>
-          <p
-            className="card-text"
-            onClick="alert('Contact: {adObject.contact}')"
-          >
-            Contact: {adObject.contact}
-          </p>
-          <div className="d-flex justify-content-between align-items-center"></div>
-        </div>
-        <div className="card-footer text-center">
-          <button
-            className="btn btn-info"
-            onClick="alert('Contact: contact5@example.com')"
-          >
-            Details
-          </button> 
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export default Ads;
