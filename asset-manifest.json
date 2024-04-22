@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-marketplace-ui/static/css/main.cbc512fe.css",
-    "main.js": "/react-marketplace-ui/static/js/main.000739f4.js",
+    "main.js": "/react-marketplace-ui/static/js/main.3696bae6.js",
     "index.html": "/react-marketplace-ui/index.html",
     "main.cbc512fe.css.map": "/react-marketplace-ui/static/css/main.cbc512fe.css.map",
-    "main.000739f4.js.map": "/react-marketplace-ui/static/js/main.000739f4.js.map"
+    "main.3696bae6.js.map": "/react-marketplace-ui/static/js/main.3696bae6.js.map"
   },
   "entrypoints": [
     "static/css/main.cbc512fe.css",
-    "static/js/main.000739f4.js"
+    "static/js/main.3696bae6.js"
   ]
 }
