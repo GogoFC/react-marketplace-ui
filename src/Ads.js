@@ -1,9 +1,11 @@
 // Syntax for importing exported array is { ads }. Array const must be exported.
 import { ads } from "./Data.js";
+import Data from "./Data.json";
 
 const Ads = () => {
   return (
     <div>
+      <ShowAds ads={Data} />
       <ShowAds ads={ads} />
     </div>
   );
