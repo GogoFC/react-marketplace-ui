@@ -59,7 +59,7 @@ const Ads = () => {
                       <p className="card-text">{ad.text}</p>
                       <p
                         className="card-text"
-                        onClick="alert('Contact: {adObject.contact}')"
+                        onClick={() => this.setState(alert('Contact: contact5@example.com'))}
                       >
                         Contact: {ad.contact}
                       </p>
@@ -68,7 +68,7 @@ const Ads = () => {
                     <div className="card-footer text-center">
                       <button
                         className="btn btn-info"
-                        onClick="alert('Contact: contact5@example.com')"
+                        onClick={() => this.setState(alert('Contact: contact5@example.com'))}
                       >
                         Details
                       </button>
