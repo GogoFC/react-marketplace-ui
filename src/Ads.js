@@ -2,6 +2,9 @@
 import { ads } from "./Data.js";
 import Data from "./Data.json";
 
+
+
+
 const Ads = () => {
   return (
     <div>
@@ -10,6 +13,8 @@ const Ads = () => {
     </div>
   );
 
+
+  
   function ShowAds(props) {
     const ads = props.ads;
 
